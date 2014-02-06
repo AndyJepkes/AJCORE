@@ -16,14 +16,15 @@
 
 	// é = Alt + 130
 	// © = Alt + 0169
-	require_once 'content/CafeZuri/module_settings.php';
+	require_once 'content/Blank/module_settings.php';
 	if (class_exists('SiteSettings') != true) {
 		class SiteSettings {
 		
-			public $SITE_TITLE = "Café Zuri";
-			public $BD_NAME = "Cafe_Zuri_DB_443";
-			public $FOOTER_TEXT = 'Café Zuri ©2012';
-			public $MODULE_NAME = 'CafeZuri';
+			public $SITE_TITLE = "Blank Template";
+			public $BD_NAME = "--";
+			public $FOOTER_TEXT = 'Blank Template ©2014';
+			//This should be called directory or converted to a real module paradigm
+			public $MODULE_NAME = 'Blank';
 
 
 			//========================= FUNCTIONS =========================
