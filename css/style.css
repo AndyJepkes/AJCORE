@@ -1,0 +1,119 @@
+@charset "utf-8";
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: orange;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #333;
+}
+
+a { text-decoration:none; font-size:12px;}
+a:hover{}
+a:visited{}
+
+p {	font-size:12px;	color:#333; }
+
+h1 { font-size:20px; color:#000; }
+h2 { font-size:18px; color:#000; }
+h3 { font-size:16px; color:#000; }
+
+.ajcore h3 {
+	margin: 15px 0 0 0;
+	color:#333;
+}
+
+.red { color:#F00; }
+.green { color:#090; }
+
+.ajcore #container {
+	width: 650px;
+	margin: 30px auto;
+	border: none;
+	text-align:left;
+	padding:20px 30px;
+	background-color:#FFF;
+	border-radius:10px;
+	-moz-box-shadow: 5px 5px 3px #000;
+	-webkit-box-shadow: 5px 5px 3px #000;
+	box-shadow: 5px 5px 3px #000;
+}
+
+.ajcore .address p {
+	margin-bottom: 10px;
+	color:#990000;
+	font-weight: bold;
+}
+.ajcore .contact p {
+	margin-bottom: 10px;
+	color:#990000;
+	font-weight: bold;
+	float:right;
+	text-align: right;
+	margin-right: 35px;
+}
+
+.ajcore #header {margin-top: 20px; }
+.ajcore #header h1 {margin: 5px 0 0 0;}
+.ajcore #header img{ margin-left: -20px; margin-bottom: 20px;}
+
+.ajcore #left-sidebar {
+	width: 180px;
+	padding-right: 20px;
+	padding-top: 15px;
+	background-color: #fff;
+}
+.ajcore #left-sidebar a,
+.ajcore #right-sidebar a {
+	color:#69C;
+	text-decoration:none;
+	font-size:.8em;
+	padding-top:5px;
+	list-style:none;
+}
+
+.ajcore #right-sidebar {
+	width: 230px;
+	padding: 0;
+	background-color: #fff;
+}
+.ajcore #header {
+	width:400px;
+	margin:auto;
+}
+
+.ajcore #mainContent {
+	background-color:#fff;
+	padding:8px 0 30px 30px;
+	width:435px;
+	margin:auto;
+	min-height: 400px;
+	clear:both;
+}
+.ajcore #mainContent hr {
+	width: 92%;
+	margin-left: 0;
+}
+.ajcore #mainContent .fb-like-box { 
+	margin:auto;
+}
+
+#twitter {
+	margin-top:30px;
+}
+
+.ajcore #mainContent h1{
+	color:#333;
+} 
+
+.ajcore #footer { 
+	padding: 15px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background-color:#fff;
+} 
+.ajcore #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 0; 
+	font-size:12px;
+	color:#999;
+}
+
