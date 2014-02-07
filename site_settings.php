@@ -16,7 +16,7 @@
 
 	// é = Alt + 130
 	// © = Alt + 0169
-	require_once 'content/Blank/module_settings.php';
+	require_once 'modules/Blank/module_settings.php';
 	if (class_exists('SiteSettings') != true) {
 		class SiteSettings {
 		
