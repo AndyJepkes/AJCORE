@@ -12,7 +12,7 @@
 
 <?php
 //Should we call this file a manifest?
-//use a minifier here.
+
 
 // é = Alt + 130
 // © = Alt + 0169

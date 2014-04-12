@@ -22,7 +22,7 @@ $Settings = new SiteSettings();
 <?php echo '<title>', $Settings->SITE_TITLE, '</title>' ?>
 <meta charset="utf-8" />
 
-<link rel="shortcut icon" href="favicon.ico" >
+<link rel="shortcut icon" href="images/R.ico" >
 <link href="css/AJ_CORE.css" rel="stylesheet" type="text/css" />
 <link href="css/admin.css" rel="stylesheet" type="text/css" />
 <?php $Settings->IncludeStyles(); ?>
@@ -38,22 +38,21 @@ $Settings = new SiteSettings();
 
 <![endif]-->
 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35857029-1']);
+  _gaq.push(['_trackPageview']);
 
-
-<?
-include('site_level_analytics.php');
-?>
-
-
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </head>
 <body class="ajcore">
-
-
-
 <?php 
-/*===== INCLUDE ADMIN =======*/
-
 	$userID = $_GET['userID'];
 	if ($userID == "admin") {
 		include('admin.php');
@@ -61,3 +60,6 @@ include('site_level_analytics.php');
 
   include 'modules/' . $Settings->MODULE_NAME . '/index.php';
 ?>
+
+</body>
+</html>

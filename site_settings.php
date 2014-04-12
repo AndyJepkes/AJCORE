@@ -16,7 +16,7 @@
 
 	// é = Alt + 130
 	// © = Alt + 0169
-	require_once 'modules/Blank/module_settings.php';
+	require_once 'modules/Blank/module_config.php';
 	if (class_exists('SiteSettings') != true) {
 		class SiteSettings {
 		
@@ -33,14 +33,14 @@
 			public function IncludeScripts() {
 				$module = new Module();
 				foreach ($module->ScriptIncludes as $value) {
-					echo '<script src="content/' . $this->MODULE_NAME . '/' . $value . '" type="text/javascript" ></script>';
+					echo '<script src="modules/' . $this->MODULE_NAME . '/' . $value . '" type="text/javascript" ></script>';
 				}
 				
 			}
 			public function IncludeStyles() {
 				$module = new Module();
 				foreach ($module->StyleIncludes as $value) {
-					echo '<link href="content/' . $this->MODULE_NAME . '/' . $value . '" rel="stylesheet" type="text/css" >';
+					echo '<link href="modules/' . $this->MODULE_NAME . '/' . $value . '" rel="stylesheet" type="text/css" >';
 				}
 				
 			}
