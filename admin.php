@@ -12,7 +12,7 @@
 			Welcome <?php echo $userID; ?>
 		</p>
 </div>
-<div id="ajcore-admin" class="devOpen">
+<div id="ajcore-admin" class="">
 	<h2>DevMode-..</h2>
 	
 	<div class="site-info">

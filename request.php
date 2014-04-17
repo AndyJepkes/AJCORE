@@ -1,49 +1,38 @@
 
 <?php
+/* 
+// A few helpful things you may consider adding to this class.
+// You want to print these out in a debuging module.
 
-class foo
-{
-    function do_foo()
-    {
-        echo "Doing foo."; 
-    }
+foreach (getallheaders() as $name => $value) {
+    echo "$name: $value\n";
 }
+*/
+//print_r ($_SERVER);
+//print_r ($_GET);
 
-$bar = new foo;
-$bar->do_foo();
-
-class fo
-{
-    function do_foo()
-    {
-        echo "Doing foo."; 
-    }
-}
-
-$bar = new fo;
-$bar->do_foo();
-//$userID = $_GET['userID'];
-
-//if (class_exists('request') != true) {
-	
+if (class_exists('Request') != true) {
 	class Request 
 	{
-		//public $USER_NAME = "$userID";
-
+		public $params;
 		
-		public function getuser() 
+		public function cleanParams() 
 		{
-			echo "user";
-			//echo $this->USER_NAME;	
+			$this->params = $this->clean($_GET);
 		}
+
+		function clean($elem) 
+		{ 
+		    if(!is_array($elem)) 
+		        $elem = htmlentities($elem,ENT_QUOTES,"UTF-8"); 
+		    else 
+		        foreach ($elem as $key => $value) 
+		            $elem[$key] = $value; 
+		    return $elem; 
+		} 
 	}
 
-	$myrequest = new Request;
-	$myrequest->getuser();
-//}
-
-
-
-
-
+	$CurrentRequest = new Request;
+	$CurrentRequest->cleanParams();
+}
 ?>

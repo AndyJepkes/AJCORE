@@ -11,10 +11,6 @@
 ?>
 
 <?php
-
-// é = Alt + 130
-// © = Alt + 0169
-
 	class Module {
 		public $ScriptIncludes = array(
 			'twitter' => "scripts/twitter.js",

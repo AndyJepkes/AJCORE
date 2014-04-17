@@ -7,23 +7,22 @@
 
 <?php 
 require_once 'site_settings.php';
-$Settings = new SiteSettings();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php echo '<title>', $Settings->SITE_TITLE, '</title>' ?>
+<?php print ('<title>' . $Settings->SITE_TITLE . '</title>') ?>
 <meta charset="utf-8" />
 
 <link rel="shortcut icon" href="images/R.ico" >
 <link href="css/AJ_CORE.css" rel="stylesheet" type="text/css" />
 <link href="css/admin.css" rel="stylesheet" type="text/css" />
-<?php $Settings->IncludeStyles(); ?>
+<?php echo $Settings->STYLES; ?>
 
 <script src="scripts/user_agent.js" type="text/javascript"></script>
 <script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
-<?php $Settings->IncludeScripts(); ?>
+<?php echo $Settings->SCRIPTS; ?>
 
 
 <!-- Need some logic to insert specific site settings like database credentials and includes -->

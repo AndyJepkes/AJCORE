@@ -12,12 +12,9 @@
 //	Scripts
 // Load body
 //	Load modules
-$userID = $_GET['userID'];
-echo $userID;
+
 include 'request.php';
 include 'header.php';
-
-echo "after";
 
 ?>
 </body>

@@ -4,34 +4,61 @@
 	// Site settings make it easier to update the rest of your site.
 	// Site specific information can be found here.
 
-	require_once 'modules/Blank/module_config.php';
+	
+
 	if (class_exists('SiteSettings') != true) {
 		class SiteSettings {
-		
-			public $SITE_TITLE = "Blank Template";
-			public $BD_NAME = "--";
-			public $FOOTER_TEXT = 'Blank Template ©2014';
-			//This should be called directory or converted to a real module paradigm
-			public $MODULE_NAME = 'Blank';
 
+			public $DEFAULT_MODULE = "Blank";
+			public $SITE_TITLE;
+
+			public $DB_NAME = "--";
+			public $DB_PW = "--"; // What is the secure way to handle this???
+
+			public $FOOTER_TEXT = 'Blank Template ©2014';
+
+			//This should be called directory or converted to a real module paradigm
+			//========================= INTERNAL VARS =========================
+			public $MODULE_NAME;
+			public $SCRIPTS;
+			public $STYLES;
 
 			//========================= FUNCTIONS =========================
-
-
-			public function IncludeScripts() {
-				$module = new Module();
-				foreach ($module->ScriptIncludes as $value) {
-					echo '<script src="modules/' . $this->MODULE_NAME . '/' . $value . '" type="text/javascript" ></script>';
-				}
-				
+			public function Init($obj) {
+				$this->MODULE_NAME = (!empty($obj->params["module"])
+					? $obj->params["module"] 
+					: $this->DEFAULT_MODULE
+					);
+				$this->SITE_TITLE = (!empty($obj->params["module"])
+					? $obj->params["module"] 
+					: $this->SITE_TITLE
+					);
+				require_once 'modules/'.$this->MODULE_NAME.'/config.php';
+				$module = new Module;
+				$this->SCRIPTS = $this->IncludeScripts($module);
+				$this->STYLES = $this->IncludeStyles($module);
 			}
-			public function IncludeStyles() {
-				$module = new Module();
-				foreach ($module->StyleIncludes as $value) {
-					echo '<link href="modules/' . $this->MODULE_NAME . '/' . $value . '" rel="stylesheet" type="text/css" >';
+
+			public function IncludeScripts($module) {
+				$rScripts = [];
+				foreach ($module->ScriptIncludes as $value) {
+					array_push($rScripts, '<script src="modules/' . $this->MODULE_NAME . '/' . $value . '" type="text/javascript" ></script>');
 				}
-				
+				return implode ("\n", $rScripts);
+			}
+
+			public function IncludeStyles($module) {
+				$rStyles = [];
+				foreach ($module->StyleIncludes as $value) {
+					array_push($rStyles, '<link href="modules/' . $this->MODULE_NAME . '/' . $value . '" rel="stylesheet" type="text/css" >');
+				}
+				return implode ("\n", $rStyles);
 			}
 		}
+
+		$Settings = new SiteSettings;
+		$Settings->Init($CurrentRequest);
+		
 	}
+
 ?>

@@ -13,14 +13,8 @@
 <?php
 //Should we call this file a manifest?
 
-
-// é = Alt + 130
-// © = Alt + 0169
-
 	class Module {
 		public $ScriptIncludes = array(
-			'twitter' => "scripts/twitter.js",
-			'page' => "scripts/zuri.js",
 			'UI' => "AJ_UI/scripts/AJ_UI.js",
 			'easing' => "scripts/jquery.easing.1.3.js"
 			);

@@ -27,7 +27,7 @@
 	ADMIN.prototype.minimizeDev = function() {
 		console.info('minimize');
 		this.devWindow.animate({
-			top: "-=900",
+			top: "-=1000",
 		}, 500);
 		this.devWindow.removeClass('devOpen');
 	}
@@ -35,7 +35,7 @@
 	ADMIN.prototype.maximizeDev = function() {
 		console.info('maximize');
 		this.devWindow.animate({
-			top: "+=900",
+			top: "+=1000",
 		}, 500);
 		this.devWindow.addClass('devOpen');
 	}
