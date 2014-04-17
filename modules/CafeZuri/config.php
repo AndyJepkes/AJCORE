@@ -13,6 +13,7 @@
 <?php
 	class Module {
 		public $ScriptIncludes = array(
+			"jQuery" => "scripts/jquery-1.7.2.min.js",
 			'twitter' => "scripts/twitter.js",
 			'page' => "scripts/zuri.js",
 			'UI' => "AJ_UI/scripts/AJ_UI.js",

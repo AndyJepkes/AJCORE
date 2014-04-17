@@ -10,11 +10,8 @@
 	}
 
 	ADMIN.prototype.bindEvents = function() {
-		console.info('bindEvents');
-		console.info(this.devWindow.hasClass('devOpen'));
 		//this.toggleDev.hide();
 		this.toggleDev.on('click', $.proxy(function() {
-			console.info('click');
 			if (this.devWindow.hasClass('devOpen')){
 				console.info('has Class');
 				this.minimizeDev();

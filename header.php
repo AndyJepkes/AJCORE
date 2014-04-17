@@ -21,7 +21,7 @@ require_once 'site_settings.php';
 <?php echo $Settings->STYLES; ?>
 
 <script src="scripts/user_agent.js" type="text/javascript"></script>
-<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+
 <?php echo $Settings->SCRIPTS; ?>
 
 

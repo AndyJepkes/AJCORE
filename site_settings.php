@@ -17,6 +17,9 @@
 
 			public $FOOTER_TEXT = 'Blank Template ©2014';
 
+
+
+
 			//This should be called directory or converted to a real module paradigm
 			//========================= INTERNAL VARS =========================
 			public $MODULE_NAME;
@@ -33,10 +36,17 @@
 					? $obj->params["module"] 
 					: $this->SITE_TITLE
 					);
-				require_once 'modules/'.$this->MODULE_NAME.'/config.php';
-				$module = new Module;
-				$this->SCRIPTS = $this->IncludeScripts($module);
-				$this->STYLES = $this->IncludeStyles($module);
+
+				$configPath = 'modules/'.$this->MODULE_NAME.'/config.php';
+
+				if (file_exists($configPath)) {
+					require_once 'modules/'.$this->MODULE_NAME.'/config.php';
+					$module = new Module;
+					$this->SCRIPTS = $this->IncludeScripts($module);
+					$this->STYLES = $this->IncludeStyles($module);
+				} else {
+					echo "<h2>The module you're trying to access does not have a config.php</h2>";
+				}
 			}
 
 			public function IncludeScripts($module) {

@@ -15,6 +15,7 @@
 
 	class Module {
 		public $ScriptIncludes = array(
+			"jQuery" => "scripts/jquery-1.7.2.min.js",
 			'UI' => "AJ_UI/scripts/AJ_UI.js",
 			'easing' => "scripts/jquery.easing.1.3.js"
 			);
