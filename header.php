@@ -6,7 +6,7 @@
 
 
 <?php 
-require_once 'site_settings.php';
+//require_once 'site_settings.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +51,6 @@ require_once 'site_settings.php';
 		include('admin.php');
 	}	
 
-  include 'modules/' . $Settings->MODULE_NAME . '/index.php';
+  include 'modules/' . $Settings->MODULE->View . '/index.php';
 ?>
 

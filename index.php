@@ -13,7 +13,9 @@
 // Load body
 //	Load modules
 
+
 include 'request.php';
+include 'site_settings.php';
 include 'header.php';
 
 ?>

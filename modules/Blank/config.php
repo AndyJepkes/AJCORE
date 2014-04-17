@@ -11,9 +11,12 @@
 ?>
 
 <?php
-//Should we call this file a manifest?
-
 	class Module {
+		public $Name = "Blank";
+		public $Path = "Blank"; // Path to the module
+		public $View = "Blank"; // View is at the root of this module
+		public $MobileView = "Blank/m";
+
 		public $ScriptIncludes = array(
 			"jQuery" => "scripts/jquery-1.7.2.min.js",
 			'UI' => "AJ_UI/scripts/AJ_UI.js",
@@ -25,5 +28,4 @@
 			'UI' => "AJ_UI/css/UI.css"
 			);
 	}
-
 ?>

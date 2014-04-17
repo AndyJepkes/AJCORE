@@ -12,6 +12,10 @@
 
 <?php
 	class Module {
+		public $Name = "Cafe Zuri";
+		public $Path = "CafeZuri";
+		public $View = "CafeZuri";
+
 		public $ScriptIncludes = array(
 			"jQuery" => "scripts/jquery-1.7.2.min.js",
 			'twitter' => "scripts/twitter.js",
