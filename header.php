@@ -6,7 +6,7 @@
 
 
 <?php 
-require_once 'site_settings.php'; 
+require_once 'site_settings.php';
 $Settings = new SiteSettings();
 ?>
 
@@ -55,5 +55,3 @@ $Settings = new SiteSettings();
   include 'modules/' . $Settings->MODULE_NAME . '/index.php';
 ?>
 
-</body>
-</html>

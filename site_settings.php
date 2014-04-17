@@ -1,12 +1,8 @@
-<?php
-/*************
- * AJ-CORE 
- *************/
-?>
-
+<?php /*** AJ-CORE ***/ ?>
 <?php
 
-	// Site settings make it easier to update the rest of your site and site specific information can be found in one location
+	// Site settings make it easier to update the rest of your site.
+	// Site specific information can be found here.
 
 	require_once 'modules/Blank/module_config.php';
 	if (class_exists('SiteSettings') != true) {
