@@ -17,7 +17,8 @@
 </script>
 
 <!--==================== START CONTENT ================================-->
-<h1>Blank Mobile Template</h1>
-
+<div class="wrapper">
+	<h1>Blank Mobile Template</h1>
+</div>
 
 

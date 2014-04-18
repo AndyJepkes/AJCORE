@@ -15,7 +15,7 @@
 <?php print ('<title>' . $Settings->SITE_TITLE . '</title>') ?>
 <meta charset="utf-8" />
 
-<link rel="shortcut icon" href="images/R.ico" >
+<link rel="shortcut icon" href="images/favicon.ico" >
 <link href="css/AJ_CORE.css" rel="stylesheet" type="text/css" />
 <link href="css/admin.css" rel="stylesheet" type="text/css" />
 <?php echo $Settings->STYLES; ?>

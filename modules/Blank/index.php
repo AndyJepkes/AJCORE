@@ -17,7 +17,11 @@
 </script>
 
 <!--==================== START CONTENT ================================-->
-<h1>Blank Template</h1>
+<div class="wrapper">
+	<div class="container">
+		<h1>Blank Template</h1>
+	</div>
+</div>
 
 
 
