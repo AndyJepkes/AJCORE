@@ -14,7 +14,6 @@
 	$(document).ready( function() {
 
 		if (user.Browser.IE) {
-
 			//Redirect to IE friendly site.
 			console.info('Using IE!!!!!');
 		} else {

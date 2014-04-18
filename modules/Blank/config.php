@@ -18,14 +18,11 @@
 		public $MobileView = "Blank/m";
 
 		public $ScriptIncludes = array(
-			"jQuery" => "scripts/jquery-1.7.2.min.js",
-			'UI' => "AJ_UI/scripts/AJ_UI.js",
-			'easing' => "scripts/jquery.easing.1.3.js"
+			"jQuery" => "scripts/jquery-1.7.2.min.js"
 			);
 
 		public $StyleIncludes = array(
-			'style' => "css/style.css",
-			'UI' => "AJ_UI/css/UI.css"
+			'style' => "css/style.css"
 			);
 	}
 ?>

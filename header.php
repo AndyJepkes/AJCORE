@@ -19,9 +19,7 @@
 <link href="css/AJ_CORE.css" rel="stylesheet" type="text/css" />
 <link href="css/admin.css" rel="stylesheet" type="text/css" />
 <?php echo $Settings->STYLES; ?>
-
 <script src="scripts/user_agent.js" type="text/javascript"></script>
-
 <?php echo $Settings->SCRIPTS; ?>
 
 
@@ -46,11 +44,7 @@
 </head>
 <body class="ajcore">
 <?php 
-	$userID = $_GET['userID'];
-	if ($userID == "admin") {
-		include('admin.php');
-	}	
-
+	if ($_user->ID == "admin") { include('admin.php'); }
   include 'modules/' . $Settings->MODULE->View . '/index.php';
 ?>
 

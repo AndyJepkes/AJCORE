@@ -31,6 +31,12 @@
 	text-decoration: none;
 
 }
+#ajcore-admin .site-info hr {
+	margin-bottom: 15px;
+}
+#ajcore-admin .site-info .user {
+	margin-top: -5px;
+}
 
 /*=== TOGGLE DEV MODE ===*/
 .ajcore .toggle-devmode {

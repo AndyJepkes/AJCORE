@@ -1,5 +1,10 @@
 <?php
 	class Module {
+		public $Name = "F2";
+		public $Path = "F2"; // Path to the module
+		public $View = "F2"; // View is at the root of this module
+		
+
 		public $ScriptIncludes = array(
 			"jQuery" => "js/jquery.min.js"
 			);

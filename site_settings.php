@@ -4,19 +4,17 @@
 	// Site settings make it easier to update the rest of your site.
 	// Site specific information can be found here.
 
-	
-
 	if (class_exists('SiteSettings') != true) {
 		class SiteSettings {
+			public $FRAMEWORK_VERSION = "v0.0.1";
+			public $FRAMEWORK_STAGE = "PRE-ALPHA";
 
 			public $DEFAULT_MODULE = "Blank";
 			public $SITE_TITLE;
-
+			public $FOOTER_TEXT = 'Blank Template ©2014';
+			
 			public $DB_NAME = "--";
 			public $DB_PW = "--"; // What is the secure way to handle this???
-
-			public $FOOTER_TEXT = 'Blank Template ©2014';
-
 
 
 
@@ -31,22 +29,22 @@
 			//========================= FUNCTIONS =========================
 			public function Init($obj) {
 				$this->DEVICE_TYPE = $this->getClientType();
-				$this->MODULE = $this->selectModule();
+				$this->MODULE = $this->selectModule($obj);
 				$this->selectView();
 				$this->SITE_TITLE = $this->MODULE->Name;
 				$this->SCRIPTS = $this->includeScripts($this->MODULE->ScriptIncludes);
 				$this->STYLES = $this->includeStyles($this->MODULE->StyleIncludes);
 			}
 
-			public function selectModule() {
+			public function selectModule($obj) {
 				// We can over ride the default module with the module param
 				$mPath = (!empty($obj->params["module"])
 					? $obj->params["module"] 
 					: $this->DEFAULT_MODULE
 					);
 
-				if (file_exists($this->getPath($mPath))) {
-					require_once $this->getPath($mPath);
+				if (file_exists($this->getConfigPath($mPath))) {
+					require_once $this->getConfigPath($mPath);
 					return new Module;
 				} else {
 					echo "<h2>The module you're trying to access does not have a config.php</h2>";
@@ -55,7 +53,7 @@
 				}
 			}
 
-			public function getPath($path) {
+			public function getConfigPath($path) {
 				return 'modules/'.$path.'/config.php';
 			}
 
