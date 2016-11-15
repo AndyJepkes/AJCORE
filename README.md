@@ -8,9 +8,9 @@ This is a PHP framework made to quickly stand up a PHP website. I started this p
 A neat (but totally unsecure) developer mode that gives you helpful information about the website, like a groovy flowchart to help you understand where important code lives.
 
 ###Not implemented
-Basic DB functionality
-Basic authentication
-User preference utility
+* Basic DB functionality
+* Basic authentication
+* User preference utility
 
 ##Getting started
 If you really want to try it out here's the best way to start.
