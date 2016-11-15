@@ -1,13 +1,4 @@
-<?php
-/*************
- * AJ-CORE 
- *************/
-?>
-
-
-<?php 
-//require_once 'site_settings.php';
-?>
+<?php?>
 
 <!DOCTYPE html>
 <html lang="en">
